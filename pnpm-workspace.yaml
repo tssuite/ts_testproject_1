@@ -3,3 +3,6 @@ minimumReleaseAgeExclude:
   - '@tssuite/testproject_3@0.1.7'
   - '@tssuite/testproject_2@0.1.5'
   - '@tssuite/testproject_3@0.1.8'
+overrides:
+  "@tssuite\/testproject_2": link:../testproject_2
+  "@tssuite\/testproject_3": link:../testproject_3

@@ -4,13 +4,17 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@tssuite/testproject_2': link:../testproject_2
+  '@tssuite/testproject_3': link:../testproject_3
+
 importers:
 
   .:
     dependencies:
       '@tssuite/testproject_2':
-        specifier: 0.1.5
-        version: 0.1.5
+        specifier: link:../testproject_2
+        version: link:../testproject_2
     devDependencies:
       '@types/node':
         specifier: ^26.2.0
@@ -295,14 +299,6 @@ packages:
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
-
-  '@tssuite/testproject_2@0.1.5':
-    resolution: {integrity: sha512-ocM73VpkcgmqBJsJQ4hY7RIvV7JY3YCERpnl4QXF13GDjDCfJfb5mrLeJrGOIl8VZx3+AHbahxAIPDAjoa1nGA==}
-    engines: {node: '>=22.14.0'}
-
-  '@tssuite/testproject_3@0.1.8':
-    resolution: {integrity: sha512-xJJNXylOi3U/a0hnkJmMjOAjatQgSgQ+4/+xjNKIZYcbpStYRCGpEks22tk3B1rWG6ABFZmZE/KH/cvoz2IegA==}
-    engines: {node: '>=22.14.0'}
 
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
@@ -1588,12 +1584,6 @@ snapshots:
   '@sindresorhus/base62@1.0.0': {}
 
   '@standard-schema/spec@1.1.0': {}
-
-  '@tssuite/testproject_2@0.1.5':
-    dependencies:
-      '@tssuite/testproject_3': 0.1.8
-
-  '@tssuite/testproject_3@0.1.8': {}
 
   '@types/chai@5.2.3':
     dependencies:
