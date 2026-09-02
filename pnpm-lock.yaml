@@ -4,17 +4,13 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  '@tssuite/testproject_2': link:../testproject_2
-  '@tssuite/testproject_3': link:../testproject_3
-
 importers:
 
   .:
     dependencies:
       '@tssuite/testproject_2':
-        specifier: link:../testproject_2
-        version: link:../testproject_2
+        specifier: 0.1.6
+        version: 0.1.6
     devDependencies:
       '@tssuite/dna-tssuite':
         specifier: ^0.1.1
@@ -47,8 +43,8 @@ importers:
         specifier: ^0.5.2
         version: 0.5.2(eslint@10.9.1(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
       globals:
-        specifier: ^17.11.0
-        version: 17.11.0
+        specifier: ^17.12.0
+        version: 17.12.0
       jsdoc:
         specifier: ^4.0.5
         version: 4.0.5
@@ -359,6 +355,14 @@ packages:
   '@tssuite/helix-js@0.1.0':
     resolution: {integrity: sha512-0mxCYBZL/EWWBDgoJHGfk9jSWh82spU1fPdoDHzkxKh2BAA6A6MLZDlDSSFc0bqsiggP5Z9gww3z2TqSYFFkpA==}
     engines: {node: '>=22'}
+
+  '@tssuite/testproject_2@0.1.6':
+    resolution: {integrity: sha512-wztjvvZT15IIo2Jf/en1KNUn78Ql/bE8gYfrTvNPSX5X1py8V7pbzptALSps9BDhsYkZNTdj5kMeQ/ZF4IvqIQ==}
+    engines: {node: '>=22.14.0'}
+
+  '@tssuite/testproject_3@0.1.9':
+    resolution: {integrity: sha512-WPiuZGsCT0qsCT6FCeGGISrZSdU3wOMDeMCzu1brJ0L/aOgtSZycNgVM4rFo4IV8vRH4a8z90KSKYyIDbYovBA==}
+    engines: {node: '>=22.14.0'}
 
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
@@ -784,8 +788,8 @@ packages:
   glob-to-regexp@0.4.1:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
 
-  globals@17.11.0:
-    resolution: {integrity: sha512-Z2I8hM+PbJDXQDq3Icgpzv+mPdwr68iZUU9d5WW4FuXfDUQfkZaZuvjMv42/5crNyw154+9+VWXbYrUgDXbxNw==}
+  globals@17.12.0:
+    resolution: {integrity: sha512-cezEd/DTyyht9cvSSURyygXPfy04GtWO/5e6ZPvH7fCtjKz9PYOmuawphw1Ctd1f6C+5JypXfGD7ahNMXvevBA==}
     engines: {node: '>=18'}
 
   globrex@0.1.2:
@@ -1689,6 +1693,12 @@ snapshots:
 
   '@tssuite/helix-js@0.1.0': {}
 
+  '@tssuite/testproject_2@0.1.6':
+    dependencies:
+      '@tssuite/testproject_3': 0.1.9
+
+  '@tssuite/testproject_3@0.1.9': {}
+
   '@types/chai@5.2.3':
     dependencies:
       '@types/deep-eql': 4.0.2
@@ -2172,7 +2182,7 @@ snapshots:
 
   glob-to-regexp@0.4.1: {}
 
-  globals@17.11.0: {}
+  globals@17.12.0: {}
 
   globrex@0.1.2: {}
 
